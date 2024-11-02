@@ -1,4 +1,4 @@
-rootProject.name = "labymod4-addon-template"
+rootProject.name = "AutoVoice"
 
 pluginManagement {
     val labyGradlePluginVersion = "0.5.6"
