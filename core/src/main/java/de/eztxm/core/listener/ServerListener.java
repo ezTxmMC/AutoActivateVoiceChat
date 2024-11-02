@@ -15,8 +15,9 @@ public class ServerListener {
   @Subscribe
   public void onLogin(ServerLoginEvent event) {
     this.addon.displayMessage(this.addon.configuration().server().get());
+    this.addon.displayMessage(event.serverData().address().getHost());
     if (this.addon.configuration().server().get().equalsIgnoreCase("")) return;
     if (!event.serverData().address().getHost().equalsIgnoreCase(this.addon.configuration().server().get())) return;
-    this.addon.labyAPI().minecraft().chatExecutor().chat("/labymod voicechat activate");
+    this.addon.displayMessage("/labymod voicechat activate");
   }
 }
