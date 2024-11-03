@@ -13,10 +13,9 @@ public class ServerListener {
   }
 
   @Subscribe
-  public void onLogin(ServerLoginEvent event) throws InterruptedException {
+  public void onLogin(ServerLoginEvent event) {
     if (this.addon.configuration().server().get().equalsIgnoreCase("")) return;
     if (!event.serverData().address().getHost().equalsIgnoreCase(this.addon.configuration().server().get())) return;
-    this.addon.labyAPI().wait(1000);
-    this.addon.labyAPI().minecraft().chatExecutor().suggestCommand("/labymod voicechat activate");
+    this.addon.labyAPI().minecraft().openChat("/labymod voicechat activate");
   }
 }
