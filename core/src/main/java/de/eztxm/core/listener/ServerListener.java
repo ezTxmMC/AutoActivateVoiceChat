@@ -1,8 +1,8 @@
 package de.eztxm.core.listener;
 
-import net.labymod.api.event.Subscribe;
-import net.labymod.api.event.client.network.server.ServerLoginEvent;
 import de.eztxm.core.AutoVoiceAddon;
+import net.labymod.api.event.Subscribe;
+import net.labymod.api.event.client.network.server.ServerJoinEvent;
 
 public class ServerListener {
 
@@ -13,9 +13,9 @@ public class ServerListener {
   }
 
   @Subscribe
-  public void onLogin(ServerLoginEvent event) {
+  public void onJoin(ServerJoinEvent event) {
     if (this.addon.configuration().server().get().equalsIgnoreCase("")) return;
     if (!event.serverData().address().getHost().equalsIgnoreCase(this.addon.configuration().server().get())) return;
-    this.addon.labyAPI().minecraft().openChat("/labymod voicechat activate");
+    this.addon.labyAPI().minecraft().chatExecutor().chat("/labymod voicechat activate");
   }
 }
