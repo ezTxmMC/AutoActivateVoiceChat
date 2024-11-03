@@ -23,10 +23,10 @@ labyMod {
     }
 
     addonInfo {
-        namespace = "autovoice"
-        displayName = "Auto Voice"
+        namespace = "autochat"
+        displayName = "AutoChat"
         author = "ezTxmMC"
-        description = "Automatically activating of voicechat on servers."
+        description = "Automatically send something in the chat."
         minecraftVersion = "*"
         version = rootProject.version.toString()
     }

@@ -1,0 +1,15 @@
+{
+  "autovoice": {
+    "settings": {
+      "enabled": {
+        "name": "Enabled"
+      },
+      "server": {
+        "name": "Server-Address"
+      },
+      "input": {
+        "name": "Input"
+      }
+    }
+  }
+}

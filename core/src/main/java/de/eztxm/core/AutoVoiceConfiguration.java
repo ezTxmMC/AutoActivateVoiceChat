@@ -13,6 +13,8 @@ public class AutoVoiceConfiguration extends AddonConfig {
   private final ConfigProperty<Boolean> enabled = new ConfigProperty<>(true);
   @TextFieldSetting
   private final ConfigProperty<String> server = new ConfigProperty<>("");
+  @TextFieldSetting
+  private final ConfigProperty<String> input = new ConfigProperty<>("");
 
   @Override
   public ConfigProperty<Boolean> enabled() {
@@ -21,5 +23,9 @@ public class AutoVoiceConfiguration extends AddonConfig {
 
   public ConfigProperty<String> server() {
     return this.server;
+  }
+
+  public ConfigProperty<String> input() {
+    return this.input;
   }
 }
