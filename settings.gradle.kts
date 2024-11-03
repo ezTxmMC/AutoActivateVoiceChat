@@ -1,4 +1,4 @@
-rootProject.name = "AutoVoice"
+rootProject.name = "AutoChat"
 
 pluginManagement {
     val labyGradlePluginVersion = "0.5.6"

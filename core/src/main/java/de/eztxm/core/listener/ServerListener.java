@@ -1,6 +1,6 @@
 package de.eztxm.core.listener;
 
-import de.eztxm.core.AutoVoiceAddon;
+import de.eztxm.core.AutoChatAddon;
 import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.client.network.server.ServerJoinEvent;
 import net.labymod.api.util.concurrent.task.Task;
@@ -8,9 +8,9 @@ import java.util.concurrent.TimeUnit;
 
 public class ServerListener {
 
-  private final AutoVoiceAddon addon;
+  private final AutoChatAddon addon;
 
-  public ServerListener(AutoVoiceAddon addon) {
+  public ServerListener(AutoChatAddon addon) {
     this.addon = addon;
   }
 
@@ -20,6 +20,6 @@ public class ServerListener {
     if (!event.serverData().address().getHost().equalsIgnoreCase(this.addon.configuration().server().get())) return;
     Task.builder(() -> {
       this.addon.labyAPI().minecraft().chatExecutor().chat(this.addon.configuration().input().get(), false);
-    }).delay(5, TimeUnit.SECONDS).build().executeOnRenderThread();
+    }).delay(1, TimeUnit.SECONDS).build().executeOnRenderThread();
   }
 }

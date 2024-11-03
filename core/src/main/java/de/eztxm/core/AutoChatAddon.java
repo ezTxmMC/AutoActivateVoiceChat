@@ -5,7 +5,7 @@ import net.labymod.api.models.addon.annotation.AddonMain;
 import de.eztxm.core.listener.ServerListener;
 
 @AddonMain
-public class AutoVoiceAddon extends LabyAddon<AutoVoiceConfiguration> {
+public class AutoChatAddon extends LabyAddon<AutoChatConfiguration> {
 
   @Override
   protected void enable() {
@@ -17,7 +17,7 @@ public class AutoVoiceAddon extends LabyAddon<AutoVoiceConfiguration> {
   }
 
   @Override
-  protected Class<AutoVoiceConfiguration> configurationClass() {
-    return AutoVoiceConfiguration.class;
+  protected Class<AutoChatConfiguration> configurationClass() {
+    return AutoChatConfiguration.class;
   }
 }
