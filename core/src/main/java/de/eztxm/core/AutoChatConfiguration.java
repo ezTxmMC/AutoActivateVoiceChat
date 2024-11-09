@@ -1,6 +1,7 @@
 package de.eztxm.core;
 
 import net.labymod.api.addon.AddonConfig;
+import net.labymod.api.client.gui.screen.widget.widgets.input.AdvancedSelectionWidget.AdvancedSelectionSetting;
 import net.labymod.api.client.gui.screen.widget.widgets.input.SwitchWidget.SwitchSetting;
 import net.labymod.api.client.gui.screen.widget.widgets.input.TextFieldWidget.TextFieldSetting;
 import net.labymod.api.configuration.loader.annotation.ConfigName;
@@ -15,6 +16,8 @@ public class AutoChatConfiguration extends AddonConfig {
   private final ConfigProperty<String> server = new ConfigProperty<>("");
   @TextFieldSetting
   private final ConfigProperty<String> input = new ConfigProperty<>("");
+  @AdvancedSelectionSetting
+  private final ConfigProperty<String> advancedSelection = new ConfigProperty<>("Hi");
 
   @Override
   public ConfigProperty<Boolean> enabled() {
